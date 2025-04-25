@@ -1,0 +1,132 @@
+/* Glassy form styles */
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.glass-btn {
+    background: rgba(13, 110, 253, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    color: white;
+    font-weight: 500;
+}
+
+.glass-btn:hover {
+    background: rgba(13, 110, 253, 0.6);
+    transform: translateY(-2px);
+}
+
+.glass-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.glass-link:hover {
+    color: #e0f7ff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Form styling */
+.auth-form form p {
+    margin-bottom: 1rem;
+}
+
+.auth-form form p label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form form p input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.auth-form form p input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Modified - Fullscreen background image with overlay */
+.auth-background {
+    background-image: url('/static/img/background.jpg'); /* You'll need to add this image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    min-height: calc(100vh - 136px); /* Adjust based on your nav+footer height */
+    padding: 40px 0;
+}
+
+/* Add overlay for better glass effect contrast */
+.auth-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%);
+    z-index: -1;
+}
+
+/* Ensure normal content still looks good outside auth areas */
+.auth-form .helptext {
+    display: block;
+    font-size: 0.875rem;
+    color: #e0f7ff;
+    margin-top: 0.25rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form ul.errorlist {
+    color: #ffcccc;
+    padding-left: 1.25rem;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure form elements maintain proper spacing */
+.auth-form h2 {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form p:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+/* If you want the background to show through the navbar as well */
+.navbar.transparent {
+    background-color: rgba(33, 37, 41, 0.5) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
